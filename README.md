@@ -14,21 +14,22 @@ This project is a Flask-based API that allows users to extract and analyze text 
 
 To run this project, you need to install the required libraries. You can do so by running:
 
+### Create Python Virtual Environment
 ```bash
 python3 -m venv venv
 ```
 
-## Linux / MacOS
+### Linux / MacOS
 ```bash
 source venv/bin/activate
 ```
 
-## Windows
+### Windows
 ```bash
 .\venv\Scripts\activate
 ```
 
-## Install Python Packages
+### Install Python Packages
 ```bash
 pip3 install -r requirements.txt
 ```
@@ -39,11 +40,12 @@ python -m spacy download en_core_web_sm
 ```
 
 
-## START WEB SERVER
+### START WEB SERVER
 ```bash
 python3 final-server.py
 ```
 
+### Test /process_pdf Endpoint 
 ```bash
 curl -X POST http://localhost:5000/process_pdf \
      -H "Content-Type: application/json" \
@@ -51,6 +53,7 @@ curl -X POST http://localhost:5000/process_pdf \
      -d '{"pdf_url": "[https://example.com/somefile.pdf](https://www.gpo.gov/fdsys/pkg/FR-2019-01-31/pdf/2019-00489.pdf)"}'
 ```
 
+### Test /process_docx Endpoint
 ```bash
 curl -X POST http://localhost:5000/process_docx \
      -H "Content-Type: application/json" \
