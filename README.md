@@ -62,3 +62,17 @@ curl -X POST http://localhost:5000/process_docx \
      -H "API-Key: 123456789012345" \
      -d '{"file_url": "[https://example.com/somefile.docx](https://belto.site/static_resources/file-download/Essay.docx)"}'
 ```
+
+## Future Enhancements
+
+The following features and improvements are planned for future updates:
+
+- **Set max upload limit**: Implement a maximum upload size and return an error if the file exceeds the limit.
+- **Structure extracted text**: Format the extracted text into a string that can be directly inserted into the user content chat template.
+- **PDF metadata analysis**: Extract images from PDFs or DOCX files, convert them to Base64, and include the image data in prompts.
+- **NLP tools integration**: Use NLP tools to cross-reference tokens against an English dictionary and NLP models. Perform text analysis on cleaned extracted text to maintain sentiment while reducing token count.
+- **Spreadsheet extraction**: Find and integrate a library for extracting tables from PDFs or DOCX files.
+- **Structured responses**: Combine extracted text, tables, and images into a cohesive user content string.
+- **Secure API key storage**: Use a database or locally encrypted file to securely maintain API keys.
+
+
