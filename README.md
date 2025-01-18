@@ -29,18 +29,14 @@ source venv/bin/activate
 ```
 
 ## Install Python Packages
+```bash
+pip3 install -r requirements.txt
+```
 
-
-
-
-
-
-
-
-
-
-
-
+### Download spaCy NLP model
+```bash
+python -m spacy download en_core_web_sm
+```
 
 
 ## START WEB SERVER
