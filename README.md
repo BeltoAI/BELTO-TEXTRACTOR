@@ -1,46 +1,18 @@
-# File Processing Web Server
+# Document Text Extraction and Analysis API
 
-This Flask-based web server provides an API to process files (PDF, DOCX) and extract information from them. It allows you to upload a file, and the server will process it to extract the text, tokenize it, and provide details such as the number of sentences and tokens.
+This project is a Flask-based API that allows users to extract and analyze text from PDF and DOCX files. It uses various libraries including spaCy for natural language processing, PyMuPDF for PDF text extraction, and python-docx for DOCX file handling.
 
-## Features:
-- Upload and process PDF or DOCX files.
-- Extract text from PDF files.
-- Convert DOCX files to PDF and then extract text.
-- Tokenize the extracted text and return the number of sentences and tokens.
+## Features
 
-## How it works:
-1. The API accepts a `POST` request to the `/process` endpoint.
-2. The request must include the API key and a file in the `multipart/form-data` format.
-3. The server processes the file, extracts the text, tokenizes it, and returns the number of sentences and tokens.
+- Extract text from PDF files using PyMuPDF.
+- Extract text from DOCX files using python-docx.
+- Analyze and tokenize text using spaCy.
+- Count sentences and tokens in the extracted text.
+- Secure API access with API keys.
 
-## Setup Instructions
+## Requirements
 
-1. Install the dependencies using the following command:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-2. Make sure you have `spaCy`'s English model installed:
-
-    ```bash
-    python -m spacy download en_core_web_sm
-    ```
-
-3. Run the Flask web server:
-
-    ```bash
-    python server.py
-    ```
-
-   The server will start on `http://localhost:5000`.
-
-## Example cURL Command for Testing:
-
-To test the API, you can use the following cURL command to upload a file and get the processed result:
+To run this project, you need to install the required libraries. You can do so by running:
 
 ```bash
-curl -X POST http://localhost:5000/process \
-    -H "Content-Type: multipart/form-data" \
-    -F "file=@path_to_your_file.pdf" \
-    -F "api_key=123456789012345"
+pip install -r requirements.txt
