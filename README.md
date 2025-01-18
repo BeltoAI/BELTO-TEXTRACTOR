@@ -18,13 +18,12 @@ To run this project, you need to install the required libraries. You can do so b
 ```bash
 python3 -m venv venv
 ```
-
-### Linux / MacOS
+### Activate Virtual Environment
+Linux / MacOS
 ```bash
 source venv/bin/activate
 ```
-
-### Windows
+Windows
 ```bash
 .\venv\Scripts\activate
 ```
