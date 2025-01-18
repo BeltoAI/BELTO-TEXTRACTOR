@@ -15,4 +15,5 @@ This project is a Flask-based API that allows users to extract and analyze text 
 To run this project, you need to install the required libraries. You can do so by running:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.t
+'''
