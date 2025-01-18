@@ -15,7 +15,14 @@ This project is a Flask-based API that allows users to extract and analyze text 
 To run this project, you need to install the required libraries. You can do so by running:
 
 ```bash
+python3 -m venv venv
+source venv/bin/activate
+.\venv\Scripts\activate
 pip install -r requirements.t
+```
+## START WEB SERVER
+```bash
+python3 final-server.py
 ```
 
 ```bash
