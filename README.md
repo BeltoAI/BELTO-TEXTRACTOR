@@ -30,7 +30,7 @@ This Flask-based web server provides an API to process files (PDF, DOCX) and ext
 3. Run the Flask web server:
 
     ```bash
-    python main.py
+    python server.py
     ```
 
    The server will start on `http://localhost:5000`.
