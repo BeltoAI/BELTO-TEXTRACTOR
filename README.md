@@ -45,7 +45,9 @@ python -m spacy download en_core_web_sm
 python3 final-server.py
 ```
 
-### Test /process_pdf Endpoint 
+## Testing with curl
+
+### /process_pdf 
 ```bash
 curl -X POST http://localhost:5000/process_pdf \
      -H "Content-Type: application/json" \
@@ -53,7 +55,7 @@ curl -X POST http://localhost:5000/process_pdf \
      -d '{"pdf_url": "[https://example.com/somefile.pdf](https://www.gpo.gov/fdsys/pkg/FR-2019-01-31/pdf/2019-00489.pdf)"}'
 ```
 
-### Test /process_docx Endpoint
+### /process_docx
 ```bash
 curl -X POST http://localhost:5000/process_docx \
      -H "Content-Type: application/json" \
