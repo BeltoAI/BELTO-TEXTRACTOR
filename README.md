@@ -67,6 +67,7 @@ curl -X POST http://localhost:5000/process_docx \
 
 The following features and improvements are planned for future updates:
 
+- **Base64 File Uploads**: Include ways for files to be passed as Base64 data
 - **Set max upload limit**: Implement a maximum upload size and return an error if the file exceeds the limit.
 - **Structure extracted text**: Format the extracted text into a string that can be directly inserted into the user content chat template.
 - **PDF metadata analysis**: Extract images from PDFs or DOCX files, convert them to Base64, and include the image data in prompts.
