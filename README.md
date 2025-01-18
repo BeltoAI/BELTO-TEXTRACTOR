@@ -44,8 +44,9 @@ python -m spacy download en_core_web_sm
 ```bash
 python3 final-server.py
 ```
+##
 
-## Testing with curl
+### Testing with curl
 
 ### /process_pdf 
 ```bash
