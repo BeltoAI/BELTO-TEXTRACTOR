@@ -16,4 +16,18 @@ To run this project, you need to install the required libraries. You can do so b
 
 ```bash
 pip install -r requirements.t
-'''
+```
+
+```bash
+curl -X POST http://localhost:5000/process_pdf \
+     -H "Content-Type: application/json" \
+     -H "API-Key: 123456789012345" \
+     -d '{"pdf_url": "https://example.com/somefile.pdf"}'
+```
+
+```bash
+curl -X POST http://localhost:5000/process_docx \
+     -H "Content-Type: application/json" \
+     -H "API-Key: 123456789012345" \
+     -d '{"file_url": "https://example.com/somefile.docx"}'
+```
