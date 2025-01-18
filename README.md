@@ -16,9 +16,14 @@ To run this project, you need to install the required libraries. You can do so b
 
 ```bash
 python3 -m venv venv
+
 source venv/bin/activate
+
 .\venv\Scripts\activate
+
 pip install -r requirements.t
+
+python -m spacy download en_core_web_sm
 ```
 ## START WEB SERVER
 ```bash
