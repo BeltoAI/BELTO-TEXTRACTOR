@@ -14,7 +14,7 @@ app = Flask(__name__)
 nlp = spacy.load("en_core_web_sm")
 
 # API keys array
-API_KEYS = ["123456789012345", "abcdefabcdefabc", "qwertyuiopasdfg"]
+API_KEYS = ["111111111111111", "222222222222222", "333333333333333"]
 
 
 @app.before_request
