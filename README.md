@@ -165,14 +165,14 @@ The server provides detailed error messages for invalid requests or exceeding pr
     "error": "The browser (or proxy) sent a request that this server could not understand."
 }
 ```
-### Developer Information
+# Developer Information
 
     Developers: Belto Developers Team
     Organization: Belto Inc.
     Contact: info@beltoss.com
     Repository: Belto Textractor GitHub
 
-### License
+# License
 
 This API is licensed under Belto Inc. All Rights Reserved.
 
@@ -183,7 +183,7 @@ To request an API key, contact us at info@beltoss.com.
 
 
 
-## Future Enhancements
+# Future Enhancements
 
 The following features and improvements are planned for future updates:
 
