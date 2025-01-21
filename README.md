@@ -1,4 +1,4 @@
-![record screenshot](BELTO LOGO FINAL.png)
+![Belto Logo](BELTO LOGO FINAL.png)
 
 
 # Belto Web Server: Text Processing API
