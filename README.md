@@ -109,6 +109,54 @@ Response:
 ```
 
 
+2. Processing a DOCX via Base64
+Request:
+
+```bash
+curl -X POST http://localhost:5000/process_docx_base64 \\
+-H "Content-Type: application/json" \\
+-H "API-Key: YOUR_API_KEY" \\
+-d '{
+    "file_base64": "BASE64_ENCODED_STRING",
+    "reduce_tokens": true,
+    "include_images": false,
+    "max_char_count": 1000000
+}'
+```
+
+Response:
+
+```bash
+{
+    "text": "Extracted text from the DOCX.",
+    "token_count": 2500,
+    "sentence_count": 300,
+    "reduced_text": "Summarized or filtered text based on input criteria.",
+    "images": [],
+    "process_time_seconds": 1.9,
+    "file_size_bytes": 524288
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### /process_pdf 
 ```bash
