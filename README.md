@@ -249,3 +249,29 @@ The following features and improvements are planned for future updates:
 - **Administration endpoints**: Create admin-only endpoints for managing API keys, logs, and configurations.
 - **Database integration**: Integrate a database for securely managing API keys, user data, and logs with encryption.
 
+
+### Natural Language Processing (NLP) Features
+| **Feature**                  | **Description**                                                                                                   |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Summarization Capabilities   | Provide automatic summarization of extracted text, allowing users to quickly understand the key points of documents. |
+| Sentiment Analysis           | Analyze the tone of the extracted text, helping users determine whether the content is positive, neutral, or negative. |
+| Entity Recognition           | Identify and extract entities such as names, locations, organizations, dates, and more for deeper content insights. |
+
+### OCR for Scanned Documents
+| **Feature**                  | **Description**                                                                                                   |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Optical Character Recognition (OCR) | Integrate OCR to extract text from scanned PDFs and images, enabling processing of non-editable documents.         |
+| Handwritten Document Support | Provide options for extracting text from handwritten documents.                                                   |
+
+### Output Formats
+| **Feature**                  | **Description**                                                                                                   |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Download in Various Formats  | Allow users to download processed results in JSON, XML, CSV, or plain text formats.                              |
+| Spreadsheet Export           | Enable exporting structured tables or metadata into spreadsheets for easier analysis.                            |
+
+### AI-Powered Features
+| **Feature**                  | **Description**                                                                                                   |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Document Classification      | Add machine learning models to classify documents by type (e.g., invoices, resumes, contracts).                  |
+| Recommendation Systems       | Provide recommendations for related documents or additional processing steps based on extracted content.          |
+
