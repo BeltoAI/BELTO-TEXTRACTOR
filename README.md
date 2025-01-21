@@ -189,46 +189,9 @@ While the Belto Web Server is a robust and efficient text processing API, it has
     Image extraction is supported but limited to embedded images in PDF or DOCX files.
     It does not perform OCR (optical character recognition) on image-only PDFs.
 
-5. Base64 Payload Size
+## 5. Base64 Payload Size
 
     Large Base64-encoded files can exceed the maximum request payload size. This limit depends on the Flask server configuration but defaults to 16 MB.
-
-# Potential Ways to Break It
-
-While we have implemented several safeguards, here are scenarios where the server could run into issues:
-
-    Submitting Files Beyond Limits
-        Sending files larger than 10 MB or exceeding 2,000,000 characters will result in errors. However, users who bypass these checks by misconfiguring the server may cause excessive memory consumption or crashes.
-
-    Sending Invalid Base64 Strings
-        Submitting malformed or incomplete Base64 strings will cause decoding errors, leading to a 400 Bad Request.
-
-    Overloading the Server
-        Sending multiple large requests simultaneously can overwhelm the server, especially with limited resources.
-
-    Improper API Key Management
-        Using invalid or missing API keys will block access, but if the server is misconfigured to skip validation, unauthorized users could potentially abuse the service.
-
-    Bypassing Character Limits
-        If a custom max_char_count above the hardcoded limit (2,000,000) is allowed due to server misconfiguration, processing may cause memory exhaustion or delays.
-
-    Sending Corrupt Files
-        Submitting corrupt PDF or DOCX files could lead to exceptions in the extraction libraries (e.g., PyMuPDF or python-docx).
-
-# Mitigation Strategies
-
-    Input Validation:
-        Ensure all files meet size, format, and character count limits before submitting.
-    Rate Limiting:
-        Prevent server overload by limiting the number of concurrent requests.
-    Improved Error Handling:
-        Implement logging and fail-safe mechanisms for invalid Base64 strings or corrupt files.
-    Testing and Hardening:
-        Continuously test the server against edge cases, malformed inputs, and high traffic.
-
-
-
-
 
 
 
