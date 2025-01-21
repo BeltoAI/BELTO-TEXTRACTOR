@@ -41,6 +41,12 @@ This API is maintained by **Belto Inc.** and licensed under its proprietary lice
 
 ---
 
+## Installation
+
+### Prerequisites
+- Python 3.7 or later
+- `pip` (Python package installer)
+
 ### Create Python Virtual Environment
 ```bash
 python3 -m venv venv
