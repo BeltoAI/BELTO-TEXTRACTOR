@@ -1,1 +1,14 @@
+import json
+
+data = {
+    "file_size_bytes": 171299,
+    "images": [],
+    "process_time_seconds": 0.026960372924804688,
+    "sentence_count": 45,
+    "text": "796 \nFederal Register / Vol. 84, No. 21 / Thursday, January 31, 2019 / Notices ...",
+    "token_count": 1471
+}
+
+with open("output.json", "w") as json_file:
+    json.dump(data, json_file, indent=4)
 
