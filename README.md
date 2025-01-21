@@ -78,7 +78,37 @@ python3 final-server.py
 ```
 ##
 
-### Testing with curl
+# Usage
+
+## 1. Processing a PDF via URL
+
+### Request:
+```bash
+curl -X POST http://localhost:5000/process_pdf_url \\
+-H "Content-Type: application/json" \\
+-H "API-Key: YOUR_API_KEY" \\
+-d '{
+    "file_url": "https://example.com/sample.pdf",
+    "reduce_tokens": false,
+    "include_images": true,
+    "max_char_count": 1000000
+}'
+```
+
+Response:
+
+```bash
+{
+    "text": "Extracted text from the PDF.",
+    "token_count": 1200,
+    "sentence_count": 150,
+    "images": [],
+    "process_time_seconds": 2.3,
+    "file_size_bytes": 1048576
+}
+```
+
+
 
 ### /process_pdf 
 ```bash
