@@ -8,7 +8,7 @@ curl -X POST http://beltoss.com/process_pdf_url \\
 -H "Content-Type: application/json" \\
 -H "API-Key: 123456789012345" \\
 -d '{
-    "file_url": "https://example.com/sample.pdf](https://www.gpo.gov/fdsys/pkg/FR-2019-01-31/pdf/2019-00489.pdf)",
+    "file_url": "https://www.gpo.gov/fdsys/pkg/FR-2019-01-31/pdf/2019-00489.pdf",
     "reduce_tokens": false,
     "include_images": true,
     "max_char_count": 1000000
