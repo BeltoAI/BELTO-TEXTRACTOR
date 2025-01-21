@@ -139,6 +139,55 @@ Response:
 ```
 
 
+# Error Handling
+
+The server provides detailed error messages for invalid requests or exceeding processing limits.
+
+## Example Errors
+
+### Invalid API Key:
+```json
+{
+    "error": "Invalid or missing API key"
+}
+```
+### Character Limit Exceeded:
+
+```json
+{
+    "error": "Text exceeds maximum character limit of 1000000. Reduce the file size or content."
+}
+```
+### Malformed JSON:
+
+```json
+{
+    "error": "The browser (or proxy) sent a request that this server could not understand."
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Future Enhancements
 
