@@ -109,7 +109,7 @@ Response:
 ```
 
 
-2. Processing a DOCX via Base64
+## 2. Processing a DOCX via Base64
 Request:
 
 ```bash
