@@ -1,18 +1,45 @@
-# Document Text Extraction and Analysis API
+# Belto Web Server: Text Processing API
 
-This project is a Flask-based API that allows users to extract and analyze text from PDF and DOCX files. It uses various libraries including spaCy for natural language processing, PyMuPDF for PDF text extraction, and python-docx for DOCX file handling.
+The **Belto Web Server** is a robust, open-source API designed for efficient and scalable text extraction and processing. It supports PDF and DOCX file formats, allowing developers to extract text, analyze content, and optionally include metadata such as token counts, sentence counts, and embedded images.
 
-## Features
+This API is maintained by **Belto Inc.** and licensed under its proprietary license. **API keys are required** to use the service. For inquiries, contact the Belto team at [info@beltoss.com](mailto:info@beltoss.com).
 
-- Extract text from PDF files using PyMuPDF.
-- Extract text from DOCX files using python-docx.
-- Analyze and tokenize text using spaCy.
-- Count sentences and tokens in the extracted text.
-- Secure API access with API keys.
+---
 
-## Requirements
+## Key Features
 
-To run this project, you need to install the required libraries. You can do so by running:
+- **PDF Text Extraction**: Extract plain text and images from PDF documents.
+- **DOCX Text Extraction**: Extract plain text and images from Microsoft Word (.docx) files.
+- **Base64 File Support**: Process files sent as Base64-encoded strings.
+- **Token and Sentence Analysis**: Get token counts, sentence counts, and reduced versions of text for meaningful insights.
+- **Customizable Character Limits**: Enforce character limits during processing to optimize performance and resource usage.
+- **Detailed Error Handling**: User-friendly error messages for invalid requests or unsupported file sizes.
+
+---
+
+## Capabilities
+
+### Processing Limits
+| **Parameter**           | **Value**                          |
+|--------------------------|-------------------------------------|
+| Max File Size            | 10 MB                              |
+| Default Max Character Count | 1,000,000 characters            |
+| Absolute Max Character Count | 2,000,000 characters          |
+| Supported File Types     | PDF, DOCX                         |
+| Supported Input Methods  | File URL, Base64 Encoded Files    |
+
+### Key Endpoints
+| **Endpoint**                 | **Method** | **Description**                                                                                                                                 |
+|------------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| `/process_pdf_url`           | `POST`     | Process a PDF file provided via URL.                                                                                                           |
+| `/process_docx_url`          | `POST`     | Process a DOCX file provided via URL.                                                                                                          |
+| `/process_pdf_base64`        | `POST`     | Process a PDF file sent as a Base64-encoded string.                                                                                            |
+| `/process_docx_base64`       | `POST`     | Process a DOCX file sent as a Base64-encoded string.                                                                                           |
+| `/capabilities`              | `GET`      | Get the server's processing limits and capabilities.                                                                                           |
+| `/health`                    | `GET`      | Check the server's health status.                                                                                                              |
+| `/info`                      | `GET`      | Get general information about the server, including licensing, repository details, and developer contact information.                          |
+
+---
 
 ### Create Python Virtual Environment
 ```bash
