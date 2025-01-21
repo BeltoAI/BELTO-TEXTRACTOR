@@ -197,10 +197,10 @@ While the Belto Web Server is a robust and efficient text processing API, it has
 
 While we have implemented several safeguards, here are scenarios where the server could run into issues:
 
-    ## Submitting Files Beyond Limits
+    Submitting Files Beyond Limits
         Sending files larger than 10 MB or exceeding 2,000,000 characters will result in errors. However, users who bypass these checks by misconfiguring the server may cause excessive memory consumption or crashes.
 
-    ##Sending Invalid Base64 Strings
+    Sending Invalid Base64 Strings
         Submitting malformed or incomplete Base64 strings will cause decoding errors, leading to a 400 Bad Request.
 
     Overloading the Server
@@ -215,7 +215,7 @@ While we have implemented several safeguards, here are scenarios where the serve
     Sending Corrupt Files
         Submitting corrupt PDF or DOCX files could lead to exceptions in the extraction libraries (e.g., PyMuPDF or python-docx).
 
-Mitigation Strategies
+# Mitigation Strategies
 
     Input Validation:
         Ensure all files meet size, format, and character count limits before submitting.
