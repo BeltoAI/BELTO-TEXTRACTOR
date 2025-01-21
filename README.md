@@ -1,5 +1,5 @@
 
-# Belto Web Server: Text Processing API 
+# Belto: Text Processing API 
 
 ![Alt text](logo.png)
 
