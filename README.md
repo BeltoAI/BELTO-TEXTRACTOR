@@ -233,11 +233,6 @@ To request an API key, contact us at info@beltoss.com.
 
 The following features and improvements are planned for future updates:
 
-- **Base64 File Uploads**: Include ways for files to be passed as Base64 data
-- **Set max upload limit**: Implement a maximum upload size and return an error if the file exceeds the limit.
-- **Structure extracted text**: Format the extracted text into a string that can be directly inserted into the user content chat template.
-- **PDF metadata analysis**: Extract images from PDFs or DOCX files, convert them to Base64, and include the image data in prompts.
-- **NLP tools integration**: Use NLP tools to cross-reference tokens against an English dictionary and NLP models. Perform text analysis on cleaned extracted text to maintain sentiment while reducing token count.
 - **Spreadsheet extraction**: Find and integrate a library for extracting tables from PDFs or DOCX files.
 - **Structured responses**: Combine extracted text, tables, and images into a cohesive user content string.
 - **Secure API key storage**: Use a database or locally encrypted file to securely maintain API keys.
