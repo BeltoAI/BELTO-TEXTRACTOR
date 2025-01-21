@@ -1,7 +1,7 @@
 
-# Belto Web Server: Text Processing API ![Alt text](finallogo.png)
+# Belto Web Server: Text Processing API 
 
-![Alt text](finallogo.png)
+![Alt text](finallogo.png) ![Alt text](finallogo.png) ![Alt text](finallogo.png)
 
 
 The **Belto Web Server** is a robust, open-source API designed for efficient and scalable text extraction and processing. It supports PDF and DOCX file formats, allowing developers to extract text, analyze content, and optionally include metadata such as token counts, sentence counts, and embedded images.
