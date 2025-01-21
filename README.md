@@ -140,40 +140,6 @@ Response:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### /process_pdf 
-```bash
-curl -X POST http://localhost:5000/process_pdf \
--H "Content-Type: application/json" \
--H "API-Key: 123456789012345" \
--d '{"pdf_url": "https://www.gpo.gov/fdsys/pkg/FR-2019-01-31/pdf/2019-00489.pdf"}'
-```
-
-### /process_docx
-```bash
-curl -X POST http://localhost:5000/process_docx \
--H "Content-Type: application/json" \
--H "API-Key: 123456789012345" \
--d '{"file_url": "https://belto.site/static_resources/file-download/Essay.docx"}'
-```
-
 ## Future Enhancements
 
 The following features and improvements are planned for future updates:
