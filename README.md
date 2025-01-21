@@ -50,17 +50,17 @@ python3 final-server.py
 ### /process_pdf 
 ```bash
 curl -X POST http://localhost:5000/process_pdf \
-     -H "Content-Type: application/json" \
-     -H "API-Key: 123456789012345" \
-     -d '{"pdf_url": "[https://example.com/somefile.pdf](https://www.gpo.gov/fdsys/pkg/FR-2019-01-31/pdf/2019-00489.pdf)"}'
+-H "Content-Type: application/json" \
+-H "API-Key: 123456789012345" \
+-d '{"pdf_url": "https://www.gpo.gov/fdsys/pkg/FR-2019-01-31/pdf/2019-00489.pdf"}'
 ```
 
 ### /process_docx
 ```bash
 curl -X POST http://localhost:5000/process_docx \
-     -H "Content-Type: application/json" \
-     -H "API-Key: 123456789012345" \
-     -d '{"file_url": "[https://example.com/somefile.docx](https://belto.site/static_resources/file-download/Essay.docx)"}'
+-H "Content-Type: application/json" \
+-H "API-Key: 123456789012345" \
+-d '{"file_url": "https://belto.site/static_resources/file-download/Essay.docx"}'
 ```
 
 ## Future Enhancements
