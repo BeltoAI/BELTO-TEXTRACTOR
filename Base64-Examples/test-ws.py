@@ -1,9 +1,13 @@
 import base64
+import spacy
 from flask import Flask, request, jsonify
 from io import BytesIO
 import PyPDF2
 import docx
 import sys
+
+# Load spaCy's English model
+nlp = spacy.load("en_core_web_sm")
 
 app = Flask(__name__)
 
@@ -42,7 +46,22 @@ def upload_base64():
         if not text.strip():
             return jsonify({'error': 'No extractable text found'}), 400
 
-        return jsonify({'text': text}), 200
+        # Tokenize and analyze text using spaCy
+        doc = nlp(text)
+        sentences = [sent.text.strip() for sent in doc.sents]
+        tokens = [token.text for token in doc if not token.is_punct and not token.is_space]
+        
+        sentence_count = len(sentences)
+        token_count = len(tokens)
+
+        # Prepare the response data
+        response_data = {
+            'text': text,
+            'token_count': token_count,
+            'sentence_count': sentence_count
+        }
+
+        return jsonify(response_data), 200
 
     except base64.binascii.Error:
         return jsonify({'error': 'Invalid base64 encoding'}), 400
