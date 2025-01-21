@@ -236,5 +236,16 @@ The following features and improvements are planned for future updates:
 - **Spreadsheet extraction**: Find and integrate a library for extracting tables from PDFs or DOCX files.
 - **Structured responses**: Combine extracted text, tables, and images into a cohesive user content string.
 - **Secure API key storage**: Use a database or locally encrypted file to securely maintain API keys.
-
+- **Error handling for unsupported file types**: Add clear error messages when unsupported file formats are uploaded.
+- **Base64 upload restrictions**: Implement strict limits for Base64-encoded data size to prevent server overload.
+- **Text-only endpoints**: Add support for endpoints that process raw text inputs without requiring files.
+- **Enhanced table extraction**: Improve the ability to extract and represent table data from PDFs and DOCX files.
+- **Pagination and metadata**: Embed page numbering, start and end points, and other metadata into extracted responses for better structure.
+- **Extended file format support**: Add support for `.doc` and `.txt` files.
+- **Multiple file uploads**: Enable processing of multiple files simultaneously in a single request.
+- **Detailed logging**: Add more detailed logging to track API usage and facilitate debugging.
+- **Performance optimization**: Enhance application speed and efficiency for faster responses.
+- **In-memory processing**: Eliminate the use of temporary file downloads and process everything in memory using streams.
+- **Administration endpoints**: Create admin-only endpoints for managing API keys, logs, and configurations.
+- **Database integration**: Integrate a database for securely managing API keys, user data, and logs with encryption.
 
