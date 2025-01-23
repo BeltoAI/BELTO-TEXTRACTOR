@@ -5,7 +5,7 @@ const extractApiUrl = 'http://beltoss.com/process_pdf_url';
 const apiKeyExtract = 'API-KEY GOES HERE'; // Key for your text extraction API
 
 const openai = new OpenAI({
-  baseURL: 'http://192.168.1.43:8080/v1', // OpenAI API endpoint
+  baseURL: 'http://97.90.193.213:9999/v1', // OpenAI API endpoint
   apiKey: 'API-KEY GOES HERE', // OpenAI API key
 });
 
