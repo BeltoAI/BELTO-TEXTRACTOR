@@ -108,7 +108,60 @@ const completion = await openai.chat.completions.create({
 });
 ```
 
-The extracted text (`extractedText`) is formatted and sent to the OpenAI endpoint.
+### **Why This Is Important**
+The `{ role: 'user', content: ... }` section is a key technical element of the integration because it defines the exact format in which the user query and extracted text are passed into OpenAI's chat completion endpoint. Below is a breakdown of its technical significance:
+
+1. **Embedding Extracted Text**:
+   - The extracted text from the document (`extractedText`) is embedded within the `content` field. This ensures that the AI has full access to the context needed to process the user query accurately.
+   - The `start of [object Object]` and `end of [object Object]` markers act as delimiters, ensuring the extracted text is clearly separated from any additional instructions or metadata.
+
+2. **Dynamic Query Insertion**:
+   - The `hardcodedUserQuery` is dynamically inserted into the `content` field, making it easy to replace with real-time user input. This allows developers to create interactive systems that adapt to user-specific queries without hardcoding responses.
+
+3. **Maintaining Input Structure**:
+   - The consistent structure of this field ensures OpenAI's models receive well-organized and interpretable input. For example, using clear delimiters (`start of` and `end of`) helps the AI distinguish between the extracted document content and instructions.
+
+4. **Customizable Contextual Instructions**:
+   - Developers can enhance the `content` field by adding context-specific instructions. For example, phrases like "Based on the content above, provide a response to the user query" direct the AI's attention to both the document's content and the user's needs.
+
+5. **Optimized for OpenAI Models**:
+   - By combining the extracted text with the user query in a single `content` field, the input aligns perfectly with OpenAI's expectation for chat completions. This approach minimizes token usage while maximizing context delivery.
+
+6. **Scalability Across Use Cases**:
+   - This structure is flexible enough to handle multiple applications, such as summarization, question answering, or document analysis. Developers can reuse the same template for different scenarios by simply adjusting the query or the surrounding instructions.
+
+### Example Structure Recap:
+```javascript
+const completion = await openai.chat.completions.create({
+  model: 'gpt-3.5-turbo',
+  messages: [
+    { role: 'system', content: 'You are a Belto AI.' },
+    { role: 'user', content: `This is an enriched context generation scenario with text extracted from a document. start of [object Object]
+      **${extractedText}**
+      end of [object Object]
+
+Based on the content above, please provide a response to the user query.
+
+User Query: ${hardcodedUserQuery}` },
+  ],
+});
+```
+This structure is crucial for achieving consistent and meaningful interactions with OpenAI's models, ensuring developers can leverage the API effectively in their applications.
+The `{ role: 'user', content: ... }` section is especially critical because it defines how the user query (`hardcodedUserQuery`) and extracted document text (`extractedText`) are passed into the chat template. This process is the backbone of how the Belto API ensures rich and contextual interaction with OpenAI's chat models.
+
+- **Contextual Relevance**: By embedding the extracted document text into the chat input, the AI has the necessary context to understand and respond to the user query meaningfully. The AI can analyze the document text alongside the user query to provide accurate and relevant responses.
+
+- **Dynamic Query Handling**: The `hardcodedUserQuery` parameter can easily be replaced with real-time user input, making the system highly interactive. This flexibility allows developers to adapt the template for various use cases, from document summarization to Q&A systems.
+
+- **Enhanced Customization**: Developers can include additional instructions or metadata in the `content` field, enabling the AI to process the input in a specific way. For example, you can add instructions to prioritize certain parts of the document or respond in a specific tone.
+
+- **Streamlined Workflow**: The consistent structure of the `{ role: 'user', content: ... }` section ensures seamless integration into existing pipelines. This reduces complexity for developers and ensures the input is always structured correctly for OpenAI's models.
+
+- **Scalability**: By leveraging this template, developers can handle various document processing tasks—such as summarization, analysis, or extraction—without needing to modify the underlying structure of the interaction, making it scalable for different applications and industries.
+The `{ role: 'user', content: ... }` section is especially critical because it defines how the user query (`hardcodedUserQuery`) and extracted document text (`extractedText`) are passed into the chat template. This format ensures:
+- **Contextual Relevance**: The extracted document text is included in the conversation, providing context for the AI to process the user query effectively.
+- **Flexibility**: Developers can dynamically replace `hardcodedUserQuery` with user-provided queries, enabling real-time interaction.
+- **Rich Input**: The format allows for detailed instructions and content to be passed into OpenAI for enriched responses.
 
 ---
 
