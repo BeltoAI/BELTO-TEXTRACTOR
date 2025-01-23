@@ -2,11 +2,11 @@ import axios from 'axios';
 import OpenAI from 'openai';
 
 const extractApiUrl = 'http://beltoss.com/process_pdf_url';
-const apiKeyExtract = '123456789012345'; // Key for your text extraction API
+const apiKeyExtract = 'API-KEY GOES HERE'; // Key for your text extraction API
 
 const openai = new OpenAI({
   baseURL: 'http://97.90.193.213:9999/v1', // OpenAI API endpoint
-  apiKey: 'sk-no-key-required', // OpenAI API key
+  apiKey: 'API-KEY GOES HERE', // OpenAI API key
 });
 
 const requestBody = {
