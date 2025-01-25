@@ -1,7 +1,7 @@
 import axios from 'axios';
 import OpenAI from 'openai';
 
-const extractApiUrl = 'http://beltoss.com/process_pdf_url';
+const extractApiUrl = 'http://textractor.api.beltoss.com/process_pdf_url';
 const apiKeyExtract = 'API-KEY GOES HERE'; // Key for your text extraction API
 
 const openai = new OpenAI({
