@@ -110,7 +110,7 @@ python3 final-server.py
 
 ### Request:
 ```bash
-curl -X POST http://beltoss.com/process_pdf_url \\
+curl -X POST http://textractor.api.beltoss.com/process_pdf_url \\
 -H "Content-Type: application/json" \\
 -H "API-Key: YOUR_API_KEY" \\
 -d '{
@@ -139,7 +139,7 @@ Response:
 Request:
 
 ```bash
-curl -X POST http://beltoss.com/process_docx_base64 \\
+curl -X POST http://textractor.api.beltoss.com/process_docx_base64 \\
 -H "Content-Type: application/json" \\
 -H "API-Key: YOUR_API_KEY" \\
 -d '{
