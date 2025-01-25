@@ -45,6 +45,28 @@ This API is maintained by **Belto Inc.** and licensed under its proprietary lice
 
 ---
 
+### GET Details
+
+| Endpoint                          | Argument          | Type      | Description                                                             | Default         |
+|-----------------------------------|-------------------|-----------|-------------------------------------------------------------------------|-----------------|
+| `/process_pdf_url/details`        | `file_url`        | String    | URL of the PDF file to process (required)                               | -               |
+|                                   | `reduce_tokens`   | Boolean   | Reduce text tokens (optional)                                           | False           |
+|                                   | `include_images`  | Boolean   | Include images (optional)                                               | True            |
+|                                   | `max_char_count`  | Integer   | Maximum character count allowed for processing (optional)               | 1,000,000       |
+| `/process_docx_url/details`       | `file_url`        | String    | URL of the DOCX file to process (required)                              | -               |
+|                                   | `reduce_tokens`   | Boolean   | Reduce text tokens (optional)                                           | False           |
+|                                   | `include_images`  | Boolean   | Include images (optional)                                               | True            |
+|                                   | `max_char_count`  | Integer   | Maximum character count allowed for processing (optional)               | 1,000,000       |
+| `/process_pdf_base64/details`     | `file_base64`     | String    | Base64 encoded string of the PDF file (required)                        | -               |
+|                                   | `reduce_tokens`   | Boolean   | Reduce text tokens (optional)                                           | False           |
+|                                   | `include_images`  | Boolean   | Include images (optional)                                               | True            |
+|                                   | `max_char_count`  | Integer   | Maximum character count allowed for processing (optional)               | 1,000,000       |
+| `/process_docx_base64/details`    | `file_base64`     | String    | Base64 encoded string of the DOCX file (required)                       | -               |
+|                                   | `reduce_tokens`   | Boolean   | Reduce text tokens (optional)                                           | False           |
+|                                   | `include_images`  | Boolean   | Include images (optional)                                               | True            |
+|                                   | `max_char_count`  | Integer   | Maximum character count allowed for processing (optional)               | 1,000,000       |
+
+
 ## Installation
 
 ### Prerequisites
