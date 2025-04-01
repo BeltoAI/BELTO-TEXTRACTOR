@@ -239,7 +239,7 @@ While the Belto Web Server is a robust and efficient text processing API, it has
 
 # Developer Information
 
-    Developers: Belto Developers Team
+    Developers: Michael Johnson & Emil Shirokikh
     Organization: Belto Inc.
     Contact: info@beltoss.com
     Repository: Belto Textractor GitHub
