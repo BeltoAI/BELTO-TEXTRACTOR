@@ -6,7 +6,7 @@
 ```bash
 curl -X POST http://beltoss.com/process_pdf_url \
 -H "Content-Type: application/json" \
--H "API-Key: 123456789012345" \
+-H "API-Key: <API-KEY>" \
 -d '{
     "file_url": "https://www.gpo.gov/fdsys/pkg/FR-2019-01-31/pdf/2019-00489.pdf",
     "reduce_tokens": false,
@@ -35,7 +35,7 @@ Request:
 ```bash
 curl -X POST http://beltoss.com/process_docx_base64 \\
 -H "Content-Type: application/json" \\
--H "API-Key: 123456789012345" \\
+-H "API-Key: <API-KEY>" \\
 -d '{
     "file_base64": "BASE64_ENCODED_STRING",
     "reduce_tokens": true,
